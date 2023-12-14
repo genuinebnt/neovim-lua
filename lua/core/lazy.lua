@@ -15,3 +15,12 @@ local ok, lazy = pcall(require, "lazy")
 if not ok then
 	return
 end
+
+-- set leader key. required for nvim to work.
+require("helpers.keys").set_leader(" ")
+
+-- Load plugins.
+-- Leader key must be setup before this
+lazy.setup("plugins")
+
+require("helpers.keys").map("n", "<leader>L", lazy.show, "Show lazy")
