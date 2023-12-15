@@ -47,7 +47,7 @@ lazy.setup({
 	},
 
 	-- Icons
-	{ "kyazdani42/nvim-web-devicons", lazy = true },
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
 
 	-- Neoconf
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
@@ -93,20 +93,6 @@ lazy.setup({
 	-- Nvim completions
 	{
 		"hrsh7th/nvim-cmp",
-		config = function()
-			require("cmp").setup({
-				snippet = {
-					expand = function(args)
-						require("luasnip").lsp_expand(args.body)
-					end,
-				},
-
-				sources = {
-					{ name = "luasnip" },
-					-- more sources
-				},
-			})
-		end,
 	},
 
 	-- Lua snippets completions
@@ -115,7 +101,7 @@ lazy.setup({
 	-- Alpha Dashboard
 	{
 		"goolord/alpha-nvim",
-		dependencies = { "kyazdani42/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
@@ -127,7 +113,7 @@ lazy.setup({
 		lazy = true,
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
 			require("gitsigns").setup({})
@@ -140,7 +126,7 @@ lazy.setup({
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
@@ -149,7 +135,7 @@ lazy.setup({
 	{
 		"freddiehaddad/feline.nvim",
 		dependencies = {
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 			"lewis6991/gitsigns.nvim",
 		},
 	},
@@ -244,7 +230,7 @@ lazy.setup({
 	-- Trouble
 	{
 		"folke/trouble.nvim",
-		dependencies = "RchrdAriza/nvim-web-devicons",
+		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 
 	-- Autosave
@@ -277,7 +263,7 @@ lazy.setup({
 		version = "*",
 		dependencies = {
 			"SmiteshP/nvim-navic",
-			"RchrdAriza/nvim-web-devicons", -- optional dependency
+			"nvim-tree/nvim-web-devicons", -- optional dependency
 		},
 		config = function()
 			require("barbecue").setup()
@@ -287,7 +273,7 @@ lazy.setup({
 	-- Lualine
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "RchrdAriza/nvim-web-devicons", lazy = true },
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
 	},
 
 	-- Improve UI
@@ -367,13 +353,10 @@ lazy.setup({
 	-- Completions
 	"lukas-reineke/cmp-under-comparator",
 
-	-- Devicons
-	"RchrdAriza/nvim-web-devicons",
-
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
-		dependencies = "RchrdAriza/nvim-web-devicons",
+		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 })
 
