@@ -8,6 +8,7 @@ map("i", "kj", "<esc>")
 map("n", "<leader>ww", "<cmd>w<cr>", "Write")
 map("n", "<leader>wa", "<cmd>wa<cr>", "Write All")
 map("n", "<leader>qq", "<cmd>q<cr>", "Quit")
+map("n", "<leader>qf", "<cmd>q!<cr>", "Force Quit")
 map("n", "<leader>qa", "<cmd>qa!<cr>", "Quit All")
 map("n", "<leader>qw", "<cmd>qa!<cr>", "Window")
 
